@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SigninPage</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <section class="container">
+            <form class="email">
+            <label>Email</label>
+            <input placeholder="Enter a Email" type="email" id="mail" required>
+            <label>Password</label>
+            <input placeholder="Enter a Password" type="password" id="pass" required>
+            <button onclick="signin()">Sign in</button>
+            </form>
+        <div class="line"> 
+           <p>OR</p> 
+        </div>
+        <div class="signinpage">
+            <button><img src="img/gmail.png"><a href="https://mail.google.com/mail">Sign in with Email</a></button>
+            <button><img src="img/google.svg"><a href="https://accounts.google.co.in">Sign in with Google </a></button>
+            <button><img src="img/linkedin.svg"><a href="https://api.linkedin.com/login">Sign in with Linkedin</a></button>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
