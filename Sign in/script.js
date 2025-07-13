@@ -6,7 +6,5 @@ const pass=document.getElementById("pass").value
     {
         alert("Thank you for sign in")
     }
-    else{
-        alert("check your email and password or fill the form correctly")
-    }
+   
  }
