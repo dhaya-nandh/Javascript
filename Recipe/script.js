@@ -11,15 +11,16 @@ searchBtn.addEventListener('click', () => {
 });
 
 async function fetchRecipes(query) {
-    recipeContainer.innerHTML = ''; // Clear previous results
-    const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=5&apiKey=${API_KEY}`;
+    recipeContainer.innerHTML = ' ';
+    const url = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=6&apiKey=${API_KEY}`;
     
     try {
         const response = await fetch(url);
         const data = await response.json();
         displayRecipes(data.results);
     } catch (error) {
-        console.error('Error fetching recipes:', error);
+        console.error('Error fetching recipes:',error);
+        recipeContainer.innerHTML = '<p class="error">Failed to load recipes. Please try again.</p>';
     }
 }
 
@@ -29,8 +30,7 @@ function displayRecipes(recipes) {
         recipeEl.classList.add('recipe');
         recipeEl.innerHTML = `
             <img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" alt="${recipe.title}">
-            <h3>${recipe.title}</h3>
-        `;
+            <h3>${recipe.title}</h3> `;
         recipeContainer.appendChild(recipeEl);
     });
 }
