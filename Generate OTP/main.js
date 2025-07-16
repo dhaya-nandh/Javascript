@@ -11,7 +11,7 @@ function genrate()
     setInterval(()=>{
         const min=Math.floor(seconds/60);
         let sec=seconds%60;
-        timer.innerHTML="waiting for OTP "+`${min}:${sec}`;
+        timer.innerHTML="wait for OTP "+`${min}:${sec}`;
         seconds--;
     },1000);
    setTimeout(()=>{
