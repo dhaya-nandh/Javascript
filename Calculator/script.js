@@ -13,3 +13,7 @@ function calc(){
         display.value="error";
     }
 }
+function deletevalue()
+{
+    display.value=display.value.slice(0,-1);
+}
